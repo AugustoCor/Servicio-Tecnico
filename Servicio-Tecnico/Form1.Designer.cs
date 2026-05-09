@@ -35,15 +35,24 @@ namespace Servicio_Tecnico
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.primerPanel = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.segundoPanel = new System.Windows.Forms.Panel();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnaNombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnaApellido = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnaTelefono = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnaDomicilio = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button7 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.primerPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.segundoPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -79,6 +88,7 @@ namespace Servicio_Tecnico
             this.button1.TabIndex = 1;
             this.button1.Text = "Ver datos";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -90,6 +100,7 @@ namespace Servicio_Tecnico
             this.button2.TabIndex = 2;
             this.button2.Text = "Ver repuestos";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -113,22 +124,22 @@ namespace Servicio_Tecnico
             this.button4.Text = "Cargar datos";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // panel2
+            // primerPanel
             // 
-            this.panel2.Controls.Add(this.button6);
-            this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Controls.Add(this.dataGridView1);
-            this.panel2.Location = new System.Drawing.Point(191, 90);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(562, 302);
-            this.panel2.TabIndex = 1;
+            this.primerPanel.Controls.Add(this.button6);
+            this.primerPanel.Controls.Add(this.button5);
+            this.primerPanel.Controls.Add(this.textBox1);
+            this.primerPanel.Controls.Add(this.dataGridView1);
+            this.primerPanel.Location = new System.Drawing.Point(187, 90);
+            this.primerPanel.Name = "primerPanel";
+            this.primerPanel.Size = new System.Drawing.Size(566, 302);
+            this.primerPanel.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(328, 41);
+            this.label2.Location = new System.Drawing.Point(329, 35);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(273, 39);
             this.label2.TabIndex = 0;
@@ -137,15 +148,15 @@ namespace Servicio_Tecnico
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 86);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 66);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(556, 216);
+            this.dataGridView1.Size = new System.Drawing.Size(566, 236);
             this.dataGridView1.TabIndex = 0;
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(16, 26);
+            this.textBox1.Location = new System.Drawing.Point(0, 15);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(170, 29);
             this.textBox1.TabIndex = 1;
@@ -153,7 +164,7 @@ namespace Servicio_Tecnico
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(193, 26);
+            this.button5.Location = new System.Drawing.Point(177, 15);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(91, 29);
             this.button5.TabIndex = 2;
@@ -163,12 +174,54 @@ namespace Servicio_Tecnico
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(438, 25);
+            this.button6.Location = new System.Drawing.Point(436, 15);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(100, 29);
             this.button6.TabIndex = 3;
             this.button6.Text = "Actualizar";
             this.button6.UseVisualStyleBackColor = true;
+            // 
+            // segundoPanel
+            // 
+            this.segundoPanel.Controls.Add(this.button7);
+            this.segundoPanel.Controls.Add(this.textBox2);
+            this.segundoPanel.Controls.Add(this.listView1);
+            this.segundoPanel.Location = new System.Drawing.Point(187, 90);
+            this.segundoPanel.Name = "segundoPanel";
+            this.segundoPanel.Size = new System.Drawing.Size(566, 302);
+            this.segundoPanel.TabIndex = 2;
+            // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnaNombre,
+            this.columnaApellido,
+            this.columnaTelefono,
+            this.columnaDomicilio});
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(0, 66);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(566, 236);
+            this.listView1.TabIndex = 0;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(0, 15);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(170, 29);
+            this.textBox2.TabIndex = 1;
+            // 
+            // button7
+            // 
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Location = new System.Drawing.Point(177, 15);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(91, 29);
+            this.button7.TabIndex = 2;
+            this.button7.Text = "Buscar";
+            this.button7.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -176,14 +229,17 @@ namespace Servicio_Tecnico
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.segundoPanel);
+            this.Controls.Add(this.primerPanel);
             this.Name = "Form1";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.primerPanel.ResumeLayout(false);
+            this.primerPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.segundoPanel.ResumeLayout(false);
+            this.segundoPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -197,12 +253,20 @@ namespace Servicio_Tecnico
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel primerPanel;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Panel segundoPanel;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ColumnHeader columnaNombre;
+        private System.Windows.Forms.ColumnHeader columnaApellido;
+        private System.Windows.Forms.ColumnHeader columnaTelefono;
+        private System.Windows.Forms.ColumnHeader columnaDomicilio;
     }
 }
 

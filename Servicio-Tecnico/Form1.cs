@@ -16,5 +16,17 @@ namespace Servicio_Tecnico
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            segundoPanel.Visible = false;
+            primerPanel.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            primerPanel.Visible = false;
+            segundoPanel.Show();
+        }
     }
 }
